@@ -1,0 +1,14 @@
+const express = require('express')
+
+
+const app = express()
+
+app.get('/',(_,res)=>{
+    res.status(200).send({
+        status:'OK'
+    })
+})
+
+app.listen(3001,()=>{
+    console.log('user service is up and running on 3000 🚀🚀')
+})
