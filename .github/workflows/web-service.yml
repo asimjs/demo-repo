@@ -3,15 +3,8 @@ name: web-service
 on:
   push:
     branches: [ "main" ]
-    paths-ignore:
-        - '*'
-    condition: "contains(github.event.head_commit.message, 'deploy web-service')"
-  pull_request:
-    branches: [ "main" ]
-    paths-ignore:
-        - '*'
-    condition: "contains(github.event.head_commit.message, 'deploy web-service')"
-
+    paths:
+      - 'web-service/**'
 
 jobs:
 
