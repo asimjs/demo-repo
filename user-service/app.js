@@ -9,6 +9,13 @@ app.get('/',(_,res)=>{
     })
 })
 
+app.get('/test',(_,res)=>{
+    res.status(500).send({
+        status:'NOT OK'
+    })
+})
+
+
 app.listen(3001,()=>{
     console.log('user service is up and running on 3000 🚀🚀')
 })
