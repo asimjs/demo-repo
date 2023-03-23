@@ -26,4 +26,4 @@ jobs:
       with:
         context: ./user-service
         push: true
-        tags: user-service:latest, user-service:${{ github.run_number }}
+        tags: gasmjns/demo-repo:latest, gasmjns/demo-repo:${{ github.run_number }}
