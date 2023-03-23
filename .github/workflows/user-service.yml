@@ -3,14 +3,14 @@ name: user-service
 on:
   push:
     branches: [ "main" ]
-  paths-ignore:
-      - '*'
-  condition: "contains(github.event.head_commit.message, 'deploy user-service')"
+    paths-ignore:
+        - '*'
+    condition: "contains(github.event.head_commit.message, 'deploy user-service')"
   pull_request:
     branches: [ "main" ]
-  paths-ignore:
-      - '*'
-  condition: "contains(github.event.head_commit.message, 'deploy user-service')"
+    paths-ignore:
+        - '*'
+    condition: "contains(github.event.head_commit.message, 'deploy user-service')"
 
 
 jobs:
