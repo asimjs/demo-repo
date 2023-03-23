@@ -1,16 +1,16 @@
-name: user-service
+name: web-service
 
 on:
   push:
     branches: [ "main" ]
   paths-ignore:
       - '*'
-  condition: "contains(github.event.head_commit.message, 'deploy user-service')"
+  condition: "contains(github.event.head_commit.message, 'deploy web-service')"
   pull_request:
     branches: [ "main" ]
   paths-ignore:
       - '*'
-  condition: "contains(github.event.head_commit.message, 'deploy user-service')"
+  condition: "contains(github.event.head_commit.message, 'deploy web-service')"
 
 
 jobs:
@@ -28,9 +28,9 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-    - name: build user-service and push to docker hub
+    - name: build web-service and push to docker hub
       uses: docker/build-push-action@v2
       with:
-        context: ./user-service
+        context: ./web-service
         push: true
-        tags: gasmjns/demo-repo:user-service-${{ github.run_number }}
+        tags: gasmjns/demo-repo:web-service-${{ github.run_number }}
