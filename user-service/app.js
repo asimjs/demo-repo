@@ -9,6 +9,8 @@ app.get('/',(_,res)=>{
     })
 })
 
+
+
 app.get('/test',(_,res)=>{
     res.status(500).send({
         status:'NOT OK'
